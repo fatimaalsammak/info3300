@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <h3>Fatima Al-Sammak fma29</h3>
+        <p id="p1">
+            <b>Problem 1</b><br/>
+            <ol>
+                <li>Marks: colored counties. Visual channels: varying the color hue of the counties, as well as the unaligned horizontal and vertical position of the counties.</li>
+                <li>Marks: colored circles. Visual channels: varying the color hue of the circles, as well as the aligned horizontal and vertical position of the circles.</li>
+            </ol>
+        </p>
+        <p id="p3">
+            <b>Problem 3</b><br/>
+            <script>
+                d3.json("chip_dataset.json").then((data) => {
+                    let p3 = d3.select("#p3")
+
+                    p3.append("svg")
+                        .attr("id", "p3svg")
+                        .attr("height", 500)
+                        .attr("width", 500)
+                    
+                    //const margins = 
+
+                    let rdextent = d3.extent(data["Release Day"])
+                    let textent = d3.extent(data["Transistors(million)"])
+
+                    
+                });
+            </script>
+        </p>
+    </body>
+</html>
